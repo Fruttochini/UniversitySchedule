@@ -1,0 +1,102 @@
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\UniversityJournal.exe.config
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\UniversityJournal.exe
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\UniversityJournal.pdb
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.csprojResolveAssemblyReference.cache
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\MainWindow.baml
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\MainWindow.g.cs
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\App.g.cs
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal_MarkupCompile.cache
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.g.resources
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.Properties.Resources.resources
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.csproj.GenerateResource.Cache
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.exe
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.pdb
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\LoginScreen.g.cs
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\GeneratedInternalTypeHelper.g.cs
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal_MarkupCompile.lref
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\LoginScreen.baml
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\EntityFramework.dll
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\EntityFramework.SqlServer.dll
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\EntityFramework.xml
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\EntityFramework.SqlServer.xml
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\EditStudentWindow.baml
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\EditStudentWindow.g.cs
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\System.Windows.Interactivity.dll
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\de\System.Windows.Interactivity.resources.dll
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\en\System.Windows.Interactivity.resources.dll
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\es\System.Windows.Interactivity.resources.dll
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\it\System.Windows.Interactivity.resources.dll
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+G:\Универ\GoogleDrive_oldan\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\UniversityJournal.exe.config
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.exe
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.pdb
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\UniversityJournal.exe
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\UniversityJournal.pdb
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\EntityFramework.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\EntityFramework.xml
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.csprojResolveAssemblyReference.cache
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\EditStudentWindow.baml
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\MainWindow.baml
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\EditStudentWindow.g.cs
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\LoginScreen.g.cs
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\MainWindow.g.cs
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\App.g.cs
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal_MarkupCompile.cache
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal_MarkupCompile.lref
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\LoginScreen.baml
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.g.resources
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.Properties.Resources.resources
+C:\Users\LenIvo\Google Диск\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.csproj.GenerateResource.Cache
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\UniversityJournal.exe.config
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.exe
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.pdb
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\UniversityJournal.exe
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\UniversityJournal.pdb
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\EntityFramework.dll
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\EntityFramework.SqlServer.dll
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\System.Windows.Interactivity.dll
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\EntityFramework.xml
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\EntityFramework.SqlServer.xml
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\de\System.Windows.Interactivity.resources.dll
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\en\System.Windows.Interactivity.resources.dll
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\es\System.Windows.Interactivity.resources.dll
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\it\System.Windows.Interactivity.resources.dll
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.csprojResolveAssemblyReference.cache
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\EditStudentWindow.baml
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\MainWindow.baml
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\EditStudentWindow.g.cs
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\LoginScreen.g.cs
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\MainWindow.g.cs
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\App.g.cs
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\GeneratedInternalTypeHelper.g.cs
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal_MarkupCompile.cache
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal_MarkupCompile.lref
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\View\LoginScreen.baml
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.g.resources
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.Properties.Resources.resources
+I:\Универ\GoogleDrive_oldan\Bionic\Bionic Final Project\UniversityJournal\UniversityJournal\obj\Debug\UniversityJournal.csproj.GenerateResource.Cache

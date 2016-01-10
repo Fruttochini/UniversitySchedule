@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UniversityModelStoreContainer" CdmEntityContainer="UniversityEntities">
+    <EntitySetMapping Name="University_Group">
+      <EntityTypeMapping TypeName="UniversityModel.University_Group">
+        <MappingFragment StoreEntitySet="University_Group">
+          <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
+          <ScalarProperty Name="Group_ID" ColumnName="Group_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="University_Schedule">
+      <EntityTypeMapping TypeName="UniversityModel.University_Schedule">
+        <MappingFragment StoreEntitySet="University_Schedule">
+          <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+          <ScalarProperty Name="Teacher_ID" ColumnName="Teacher_ID" />
+          <ScalarProperty Name="Group_ID" ColumnName="Group_ID" />
+          <ScalarProperty Name="LessonNo" ColumnName="LessonNo" />
+          <ScalarProperty Name="Day_of_week" ColumnName="Day_of_week" />
+          <ScalarProperty Name="Lesson_ID" ColumnName="Lesson_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="University_Student">
+      <EntityTypeMapping TypeName="UniversityModel.University_Student">
+        <MappingFragment StoreEntitySet="University_Student">
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="University_StudentPresence">
+      <EntityTypeMapping TypeName="UniversityModel.University_StudentPresence">
+        <MappingFragment StoreEntitySet="University_StudentPresence">
+          <ScalarProperty Name="Present" ColumnName="Present" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="LessonID" ColumnName="LessonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="University_Subject">
+      <EntityTypeMapping TypeName="UniversityModel.University_Subject">
+        <MappingFragment StoreEntitySet="University_Subject">
+          <ScalarProperty Name="Subject_Name" ColumnName="Subject_Name" />
+          <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="University_Teacher">
+      <EntityTypeMapping TypeName="UniversityModel.University_Teacher">
+        <MappingFragment StoreEntitySet="University_Teacher">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Teacher_ID" ColumnName="Teacher_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedule">
+      <EntityTypeMapping TypeName="UniversityModel.Schedule">
+        <MappingFragment StoreEntitySet="Schedule">
+          <ScalarProperty Name="Teacher" ColumnName="Teacher" />
+          <ScalarProperty Name="Subject_Name" ColumnName="Subject_Name" />
+          <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
+          <ScalarProperty Name="LessonNo" ColumnName="LessonNo" />
+          <ScalarProperty Name="Day_of_week" ColumnName="Day_of_week" />
+          <ScalarProperty Name="Lesson_ID" ColumnName="Lesson_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="University_GroupSubj" TypeName="UniversityModel.University_GroupSubj" StoreEntitySet="University_GroupSubj">
+      <EndProperty Name="University_Subject">
+        <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+      </EndProperty>
+      <EndProperty Name="University_Group">
+        <ScalarProperty Name="Group_ID" ColumnName="Group_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="University_StudGroup" TypeName="UniversityModel.University_StudGroup" StoreEntitySet="University_StudGroup">
+      <EndProperty Name="University_Student">
+        <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+      </EndProperty>
+      <EndProperty Name="University_Group">
+        <ScalarProperty Name="Group_ID" ColumnName="Group_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="University_TeaSubj" TypeName="UniversityModel.University_TeaSubj" StoreEntitySet="University_TeaSubj">
+      <EndProperty Name="University_Teacher">
+        <ScalarProperty Name="Teacher_ID" ColumnName="Teacher_ID" />
+      </EndProperty>
+      <EndProperty Name="University_Subject">
+        <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="View_StudentPresence">
+      <EntityTypeMapping TypeName="UniversityModel.View_StudentPresence">
+        <MappingFragment StoreEntitySet="View_StudentPresence">
+          <ScalarProperty Name="Group_ID" ColumnName="Group_ID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="LessonID" ColumnName="LessonID" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="Present" ColumnName="Present" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

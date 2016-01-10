@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UniversityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="University_Group">
+    <Key>
+      <PropertyRef Name="Group_ID" />
+    </Key>
+    <Property Name="Group_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Group_Name" Type="nvarchar" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="University_GroupSubj">
+    <Key>
+      <PropertyRef Name="Group_ID" />
+      <PropertyRef Name="Subject_ID" />
+    </Key>
+    <Property Name="Group_ID" Type="int" Nullable="false" />
+    <Property Name="Subject_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="University_Schedule">
+    <Key>
+      <PropertyRef Name="Lesson_ID" />
+    </Key>
+    <Property Name="Lesson_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Day_of_week" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="LessonNo" Type="int" Nullable="false" />
+    <Property Name="Group_ID" Type="int" Nullable="false" />
+    <Property Name="Teacher_ID" Type="int" Nullable="false" />
+    <Property Name="Subject_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="University_Student">
+    <Key>
+      <PropertyRef Name="Student_ID" />
+    </Key>
+    <Property Name="Student_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Last_Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="date" Nullable="false" />
+    <Property Name="Photo" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="University_StudentPresence">
+    <Key>
+      <PropertyRef Name="LessonID" />
+      <PropertyRef Name="StudentID" />
+      <PropertyRef Name="Date" />
+    </Key>
+    <Property Name="LessonID" Type="int" Nullable="false" />
+    <Property Name="StudentID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Mark" Type="int" />
+    <Property Name="Present" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="University_StudGroup">
+    <Key>
+      <PropertyRef Name="Group_ID" />
+      <PropertyRef Name="Student_ID" />
+    </Key>
+    <Property Name="Group_ID" Type="int" Nullable="false" />
+    <Property Name="Student_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="University_Subject">
+    <Key>
+      <PropertyRef Name="Subject_ID" />
+    </Key>
+    <Property Name="Subject_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Subject_Name" Type="nvarchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="University_Teacher">
+    <Key>
+      <PropertyRef Name="Teacher_ID" />
+    </Key>
+    <Property Name="Teacher_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Last_Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="date" Nullable="false" />
+    <Property Name="Photo" Type="varbinary(max)" />
+    <Property Name="Login" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="University_TeaSubj">
+    <Key>
+      <PropertyRef Name="Teacher_ID" />
+      <PropertyRef Name="Subject_ID" />
+    </Key>
+    <Property Name="Teacher_ID" Type="int" Nullable="false" />
+    <Property Name="Subject_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'University.dbo.Schedule' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="Lesson_ID" />
+      <PropertyRef Name="Day_of_week" />
+      <PropertyRef Name="LessonNo" />
+      <PropertyRef Name="Group_Name" />
+      <PropertyRef Name="Subject_Name" />
+      <PropertyRef Name="Teacher" />
+    </Key>
+    <Property Name="Lesson_ID" Type="int" Nullable="false" />
+    <Property Name="Day_of_week" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="LessonNo" Type="int" Nullable="false" />
+    <Property Name="Group_Name" Type="nvarchar" MaxLength="8" Nullable="false" />
+    <Property Name="Subject_Name" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Teacher" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'University.dbo.View_StudentPresence' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_StudentPresence">
+    <Key>
+      <PropertyRef Name="Last_Name" />
+      <PropertyRef Name="First_Name" />
+      <PropertyRef Name="Present" />
+      <PropertyRef Name="LessonID" />
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="Group_ID" />
+    </Key>
+    <Property Name="Last_Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="First_Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Present" Type="bit" Nullable="false" />
+    <Property Name="Mark" Type="int" />
+    <Property Name="LessonID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Group_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Universit__Group__1DE57479">
+    <End Role="University_Group" Type="Self.University_Group" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="University_StudGroup" Type="Self.University_StudGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Group">
+        <PropertyRef Name="Group_ID" />
+      </Principal>
+      <Dependent Role="University_StudGroup">
+        <PropertyRef Name="Group_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Universit__Group__20C1E124">
+    <End Role="University_Group" Type="Self.University_Group" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="University_GroupSubj" Type="Self.University_GroupSubj" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Group">
+        <PropertyRef Name="Group_ID" />
+      </Principal>
+      <Dependent Role="University_GroupSubj">
+        <PropertyRef Name="Group_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Universit__Group__24927208">
+    <End Role="University_Group" Type="Self.University_Group" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="University_Schedule" Type="Self.University_Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Group">
+        <PropertyRef Name="Group_ID" />
+      </Principal>
+      <Dependent Role="University_Schedule">
+        <PropertyRef Name="Group_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Universit__Stude__1ED998B2">
+    <End Role="University_Student" Type="Self.University_Student" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="University_StudGroup" Type="Self.University_StudGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Student">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="University_StudGroup">
+        <PropertyRef Name="Student_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Universit__Subje__164452B1">
+    <End Role="University_Subject" Type="Self.University_Subject" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="University_TeaSubj" Type="Self.University_TeaSubj" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Subject">
+        <PropertyRef Name="Subject_ID" />
+      </Principal>
+      <Dependent Role="University_TeaSubj">
+        <PropertyRef Name="Subject_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Universit__Subje__21B6055D">
+    <End Role="University_Subject" Type="Self.University_Subject" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="University_GroupSubj" Type="Self.University_GroupSubj" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Subject">
+        <PropertyRef Name="Subject_ID" />
+      </Principal>
+      <Dependent Role="University_GroupSubj">
+        <PropertyRef Name="Subject_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Universit__Subje__267ABA7A">
+    <End Role="University_Subject" Type="Self.University_Subject" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="University_Schedule" Type="Self.University_Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Subject">
+        <PropertyRef Name="Subject_ID" />
+      </Principal>
+      <Dependent Role="University_Schedule">
+        <PropertyRef Name="Subject_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_University_Schedule_University_Teacher">
+    <End Role="University_Teacher" Type="Self.University_Teacher" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="University_Schedule" Type="Self.University_Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Teacher">
+        <PropertyRef Name="Teacher_ID" />
+      </Principal>
+      <Dependent Role="University_Schedule">
+        <PropertyRef Name="Teacher_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_University_StudentPresence_University_Schedule">
+    <End Role="University_Schedule" Type="Self.University_Schedule" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="University_StudentPresence" Type="Self.University_StudentPresence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Schedule">
+        <PropertyRef Name="Lesson_ID" />
+      </Principal>
+      <Dependent Role="University_StudentPresence">
+        <PropertyRef Name="LessonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_University_StudentPresence_University_Student">
+    <End Role="University_Student" Type="Self.University_Student" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="University_StudentPresence" Type="Self.University_StudentPresence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Student">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="University_StudentPresence">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_University_TeaSubj_University_Teacher">
+    <End Role="University_Teacher" Type="Self.University_Teacher" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="University_TeaSubj" Type="Self.University_TeaSubj" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Teacher">
+        <PropertyRef Name="Teacher_ID" />
+      </Principal>
+      <Dependent Role="University_TeaSubj">
+        <PropertyRef Name="Teacher_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="UniversityModelStoreContainer">
+    <EntitySet Name="University_Group" EntityType="Self.University_Group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="University_GroupSubj" EntityType="Self.University_GroupSubj" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="University_Schedule" EntityType="Self.University_Schedule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="University_Student" EntityType="Self.University_Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="University_StudentPresence" EntityType="Self.University_StudentPresence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="University_StudGroup" EntityType="Self.University_StudGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="University_Subject" EntityType="Self.University_Subject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="University_Teacher" EntityType="Self.University_Teacher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="University_TeaSubj" EntityType="Self.University_TeaSubj" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Schedule" EntityType="Self.Schedule" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Schedule].[Lesson_ID] AS [Lesson_ID], 
+    [Schedule].[Day_of_week] AS [Day_of_week], 
+    [Schedule].[LessonNo] AS [LessonNo], 
+    [Schedule].[Group_Name] AS [Group_Name], 
+    [Schedule].[Subject_Name] AS [Subject_Name], 
+    [Schedule].[Teacher] AS [Teacher]
+    FROM [dbo].[Schedule] AS [Schedule]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_StudentPresence" EntityType="Self.View_StudentPresence" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_StudentPresence].[Last_Name] AS [Last_Name], 
+    [View_StudentPresence].[First_Name] AS [First_Name], 
+    [View_StudentPresence].[Present] AS [Present], 
+    [View_StudentPresence].[Mark] AS [Mark], 
+    [View_StudentPresence].[LessonID] AS [LessonID], 
+    [View_StudentPresence].[Date] AS [Date], 
+    [View_StudentPresence].[Group_ID] AS [Group_ID]
+    FROM [dbo].[View_StudentPresence] AS [View_StudentPresence]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Universit__Group__1DE57479" Association="Self.FK__Universit__Group__1DE57479">
+      <End Role="University_Group" EntitySet="University_Group" />
+      <End Role="University_StudGroup" EntitySet="University_StudGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Universit__Group__20C1E124" Association="Self.FK__Universit__Group__20C1E124">
+      <End Role="University_Group" EntitySet="University_Group" />
+      <End Role="University_GroupSubj" EntitySet="University_GroupSubj" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Universit__Group__24927208" Association="Self.FK__Universit__Group__24927208">
+      <End Role="University_Group" EntitySet="University_Group" />
+      <End Role="University_Schedule" EntitySet="University_Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Universit__Stude__1ED998B2" Association="Self.FK__Universit__Stude__1ED998B2">
+      <End Role="University_Student" EntitySet="University_Student" />
+      <End Role="University_StudGroup" EntitySet="University_StudGroup" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Universit__Subje__164452B1" Association="Self.FK__Universit__Subje__164452B1">
+      <End Role="University_Subject" EntitySet="University_Subject" />
+      <End Role="University_TeaSubj" EntitySet="University_TeaSubj" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Universit__Subje__21B6055D" Association="Self.FK__Universit__Subje__21B6055D">
+      <End Role="University_Subject" EntitySet="University_Subject" />
+      <End Role="University_GroupSubj" EntitySet="University_GroupSubj" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Universit__Subje__267ABA7A" Association="Self.FK__Universit__Subje__267ABA7A">
+      <End Role="University_Subject" EntitySet="University_Subject" />
+      <End Role="University_Schedule" EntitySet="University_Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_University_Schedule_University_Teacher" Association="Self.FK_University_Schedule_University_Teacher">
+      <End Role="University_Teacher" EntitySet="University_Teacher" />
+      <End Role="University_Schedule" EntitySet="University_Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_University_StudentPresence_University_Schedule" Association="Self.FK_University_StudentPresence_University_Schedule">
+      <End Role="University_Schedule" EntitySet="University_Schedule" />
+      <End Role="University_StudentPresence" EntitySet="University_StudentPresence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_University_StudentPresence_University_Student" Association="Self.FK_University_StudentPresence_University_Student">
+      <End Role="University_Student" EntitySet="University_Student" />
+      <End Role="University_StudentPresence" EntitySet="University_StudentPresence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_University_TeaSubj_University_Teacher" Association="Self.FK_University_TeaSubj_University_Teacher">
+      <End Role="University_Teacher" EntitySet="University_Teacher" />
+      <End Role="University_TeaSubj" EntitySet="University_TeaSubj" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

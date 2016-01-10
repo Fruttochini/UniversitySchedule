@@ -1,0 +1,49 @@
+﻿<Window x:Class="UniversityJournal.View.EditStudentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EditStudentWindow" Height="300" Width="400"
+        WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow">
+    <Grid Grid.Row="1" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        
+         <TextBlock Text="Name:" Grid.Row="0" Grid.Column="0"/>
+         <TextBlock Text="Last name:" Grid.Row="1" Grid.Column="0"/>
+         <TextBlock Text="Birth date:" Grid.Row="2" Grid.Column="0"/>
+         <TextBlock Text="Email:" Grid.Row="3" Grid.Column="0"/>
+         <TextBox Text="{Binding StudentName, UpdateSourceTrigger=PropertyChanged}" MaxHeight="25" VerticalAlignment="Top"
+                                   Grid.Row="0" Grid.Column="1" />
+        <TextBox Text="{Binding StudentLastName, UpdateSourceTrigger=PropertyChanged}" MaxHeight="25" VerticalAlignment="Top"
+                                   Grid.Row="1" Grid.Column="1" />
+        <DatePicker SelectedDate="{Binding StudentBirthdate, UpdateSourceTrigger=PropertyChanged}" MaxHeight="25" VerticalAlignment="Top"
+                                   Grid.Row="2" Grid.Column="1"/>
+        <TextBox Text="{Binding StudentEmail, UpdateSourceTrigger=PropertyChanged}" MaxHeight="25" VerticalAlignment="Top"
+                                   Grid.Row="3" Grid.Column="1" />
+        <Image Grid.Row="0" Grid.Column="2" Grid.RowSpan="3" Margin="10" Source="{Binding StudentPhoto}"/>
+        <Button Content="Browse..." 
+                Command="{Binding BrowseButton,UpdateSourceTrigger=PropertyChanged}"
+                CommandParameter=""
+                Grid.Row="3" Grid.Column="2" 
+                MaxWidth="60" MaxHeight="25"
+                VerticalAlignment="Top"/>
+        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Content="{Binding ButtonName}" Grid.Row="0" Grid.Column="0" IsDefault="True" MaxWidth="60" MaxHeight="25"
+                    Command="{Binding SaveButton}" CommandParameter=""/>
+            <Button Content="Close" Grid.Row="0" Grid.Column="1" IsCancel="True" MaxWidth="60" MaxHeight="25"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UniversityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="UniversityEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="University_Group" EntityType="UniversityModel.University_Group" />
+    <EntitySet Name="University_Schedule" EntityType="UniversityModel.University_Schedule" />
+    <EntitySet Name="University_Student" EntityType="UniversityModel.University_Student" />
+    <EntitySet Name="University_StudentPresence" EntityType="UniversityModel.University_StudentPresence" />
+    <EntitySet Name="University_Subject" EntityType="UniversityModel.University_Subject" />
+    <EntitySet Name="University_Teacher" EntityType="UniversityModel.University_Teacher" />
+    <EntitySet Name="Schedule" EntityType="UniversityModel.Schedule" />
+    <AssociationSet Name="FK__Universit__Group__24927208" Association="UniversityModel.FK__Universit__Group__24927208">
+      <End Role="University_Group" EntitySet="University_Group" />
+      <End Role="University_Schedule" EntitySet="University_Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Universit__Subje__267ABA7A" Association="UniversityModel.FK__Universit__Subje__267ABA7A">
+      <End Role="University_Subject" EntitySet="University_Subject" />
+      <End Role="University_Schedule" EntitySet="University_Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_University_Schedule_University_Teacher" Association="UniversityModel.FK_University_Schedule_University_Teacher">
+      <End Role="University_Teacher" EntitySet="University_Teacher" />
+      <End Role="University_Schedule" EntitySet="University_Schedule" />
+    </AssociationSet>
+    <AssociationSet Name="FK_University_StudentPresence_University_Schedule" Association="UniversityModel.FK_University_StudentPresence_University_Schedule">
+      <End Role="University_Schedule" EntitySet="University_Schedule" />
+      <End Role="University_StudentPresence" EntitySet="University_StudentPresence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_University_StudentPresence_University_Student" Association="UniversityModel.FK_University_StudentPresence_University_Student">
+      <End Role="University_Student" EntitySet="University_Student" />
+      <End Role="University_StudentPresence" EntitySet="University_StudentPresence" />
+    </AssociationSet>
+    <AssociationSet Name="University_GroupSubj" Association="UniversityModel.University_GroupSubj">
+      <End Role="University_Group" EntitySet="University_Group" />
+      <End Role="University_Subject" EntitySet="University_Subject" />
+    </AssociationSet>
+    <AssociationSet Name="University_StudGroup" Association="UniversityModel.University_StudGroup">
+      <End Role="University_Group" EntitySet="University_Group" />
+      <End Role="University_Student" EntitySet="University_Student" />
+    </AssociationSet>
+    <AssociationSet Name="University_TeaSubj" Association="UniversityModel.University_TeaSubj">
+      <End Role="University_Subject" EntitySet="University_Subject" />
+      <End Role="University_Teacher" EntitySet="University_Teacher" />
+    </AssociationSet>
+    <EntitySet Name="View_StudentPresence" EntityType="UniversityModel.View_StudentPresence" />
+  </EntityContainer>
+  <EntityType Name="University_Group">
+    <Key>
+      <PropertyRef Name="Group_ID" />
+    </Key>
+    <Property Name="Group_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Group_Name" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="University_Schedule" Relationship="UniversityModel.FK__Universit__Group__24927208" FromRole="University_Group" ToRole="University_Schedule" />
+    <NavigationProperty Name="University_Subject" Relationship="UniversityModel.University_GroupSubj" FromRole="University_Group" ToRole="University_Subject" />
+    <NavigationProperty Name="University_Student" Relationship="UniversityModel.University_StudGroup" FromRole="University_Group" ToRole="University_Student" />
+  </EntityType>
+  <EntityType Name="University_Schedule">
+    <Key>
+      <PropertyRef Name="Lesson_ID" />
+    </Key>
+    <Property Name="Lesson_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Day_of_week" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="LessonNo" Type="Int32" Nullable="false" />
+    <Property Name="Group_ID" Type="Int32" Nullable="false" />
+    <Property Name="Teacher_ID" Type="Int32" Nullable="false" />
+    <Property Name="Subject_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="University_Group" Relationship="UniversityModel.FK__Universit__Group__24927208" FromRole="University_Schedule" ToRole="University_Group" />
+    <NavigationProperty Name="University_Subject" Relationship="UniversityModel.FK__Universit__Subje__267ABA7A" FromRole="University_Schedule" ToRole="University_Subject" />
+    <NavigationProperty Name="University_Teacher" Relationship="UniversityModel.FK_University_Schedule_University_Teacher" FromRole="University_Schedule" ToRole="University_Teacher" />
+    <NavigationProperty Name="University_StudentPresence" Relationship="UniversityModel.FK_University_StudentPresence_University_Schedule" FromRole="University_Schedule" ToRole="University_StudentPresence" />
+  </EntityType>
+  <EntityType Name="University_Student">
+    <Key>
+      <PropertyRef Name="Student_ID" />
+    </Key>
+    <Property Name="Student_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Last_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="University_StudentPresence" Relationship="UniversityModel.FK_University_StudentPresence_University_Student" FromRole="University_Student" ToRole="University_StudentPresence" />
+    <NavigationProperty Name="University_Group" Relationship="UniversityModel.University_StudGroup" FromRole="University_Student" ToRole="University_Group" />
+  </EntityType>
+  <EntityType Name="University_StudentPresence">
+    <Key>
+      <PropertyRef Name="LessonID" />
+      <PropertyRef Name="StudentID" />
+      <PropertyRef Name="Date" />
+    </Key>
+    <Property Name="LessonID" Type="Int32" Nullable="false" />
+    <Property Name="StudentID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Mark" Type="Int32" />
+    <Property Name="Present" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="University_Schedule" Relationship="UniversityModel.FK_University_StudentPresence_University_Schedule" FromRole="University_StudentPresence" ToRole="University_Schedule" />
+    <NavigationProperty Name="University_Student" Relationship="UniversityModel.FK_University_StudentPresence_University_Student" FromRole="University_StudentPresence" ToRole="University_Student" />
+  </EntityType>
+  <EntityType Name="University_Subject">
+    <Key>
+      <PropertyRef Name="Subject_ID" />
+    </Key>
+    <Property Name="Subject_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subject_Name" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="University_Schedule" Relationship="UniversityModel.FK__Universit__Subje__267ABA7A" FromRole="University_Subject" ToRole="University_Schedule" />
+    <NavigationProperty Name="University_Group" Relationship="UniversityModel.University_GroupSubj" FromRole="University_Subject" ToRole="University_Group" />
+    <NavigationProperty Name="University_Teacher" Relationship="UniversityModel.University_TeaSubj" FromRole="University_Subject" ToRole="University_Teacher" />
+  </EntityType>
+  <EntityType Name="University_Teacher">
+    <Key>
+      <PropertyRef Name="Teacher_ID" />
+    </Key>
+    <Property Name="Teacher_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Last_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="University_Schedule" Relationship="UniversityModel.FK_University_Schedule_University_Teacher" FromRole="University_Teacher" ToRole="University_Schedule" />
+    <NavigationProperty Name="University_Subject" Relationship="UniversityModel.University_TeaSubj" FromRole="University_Teacher" ToRole="University_Subject" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="Lesson_ID" />
+      <PropertyRef Name="Day_of_week" />
+      <PropertyRef Name="LessonNo" />
+      <PropertyRef Name="Group_Name" />
+      <PropertyRef Name="Subject_Name" />
+      <PropertyRef Name="Teacher" />
+    </Key>
+    <Property Name="Lesson_ID" Type="Int32" Nullable="false" />
+    <Property Name="Day_of_week" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="LessonNo" Type="Int32" Nullable="false" />
+    <Property Name="Group_Name" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Subject_Name" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Teacher" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__Universit__Group__24927208">
+    <End Type="UniversityModel.University_Group" Role="University_Group" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="UniversityModel.University_Schedule" Role="University_Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Group">
+        <PropertyRef Name="Group_ID" />
+      </Principal>
+      <Dependent Role="University_Schedule">
+        <PropertyRef Name="Group_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Universit__Subje__267ABA7A">
+    <End Type="UniversityModel.University_Subject" Role="University_Subject" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="UniversityModel.University_Schedule" Role="University_Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Subject">
+        <PropertyRef Name="Subject_ID" />
+      </Principal>
+      <Dependent Role="University_Schedule">
+        <PropertyRef Name="Subject_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_University_Schedule_University_Teacher">
+    <End Type="UniversityModel.University_Teacher" Role="University_Teacher" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="UniversityModel.University_Schedule" Role="University_Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Teacher">
+        <PropertyRef Name="Teacher_ID" />
+      </Principal>
+      <Dependent Role="University_Schedule">
+        <PropertyRef Name="Teacher_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_University_StudentPresence_University_Schedule">
+    <End Type="UniversityModel.University_Schedule" Role="University_Schedule" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="UniversityModel.University_StudentPresence" Role="University_StudentPresence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Schedule">
+        <PropertyRef Name="Lesson_ID" />
+      </Principal>
+      <Dependent Role="University_StudentPresence">
+        <PropertyRef Name="LessonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_University_StudentPresence_University_Student">
+    <End Type="UniversityModel.University_Student" Role="University_Student" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="UniversityModel.University_StudentPresence" Role="University_StudentPresence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="University_Student">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="University_StudentPresence">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="University_GroupSubj">
+    <End Type="UniversityModel.University_Group" Role="University_Group" Multiplicity="*" />
+    <End Type="UniversityModel.University_Subject" Role="University_Subject" Multiplicity="*" />
+  </Association>
+  <Association Name="University_StudGroup">
+    <End Type="UniversityModel.University_Group" Role="University_Group" Multiplicity="*" />
+    <End Type="UniversityModel.University_Student" Role="University_Student" Multiplicity="*" />
+  </Association>
+  <Association Name="University_TeaSubj">
+    <End Type="UniversityModel.University_Subject" Role="University_Subject" Multiplicity="*" />
+    <End Type="UniversityModel.University_Teacher" Role="University_Teacher" Multiplicity="*" />
+  </Association>
+  <EntityType Name="View_StudentPresence">
+    <Key>
+      <PropertyRef Name="Last_Name" />
+      <PropertyRef Name="First_Name" />
+      <PropertyRef Name="Present" />
+      <PropertyRef Name="LessonID" />
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="Group_ID" />
+    </Key>
+    <Property Name="Last_Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="First_Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Present" Type="Boolean" Nullable="false" />
+    <Property Name="Mark" Type="Int32" />
+    <Property Name="LessonID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Group_ID" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>
